@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import 'package:studingwidgets/components/shoe_tile.dart';
+import 'package:studingwidgets/models/cart.dart';
 import 'package:studingwidgets/models/shoe.dart';
 
 class ShopPage extends StatefulWidget {
@@ -12,7 +14,8 @@ class ShopPage extends StatefulWidget {
 class _ShopPageState extends State<ShopPage> {
   @override
   Widget build(BuildContext context) {
-    return Column(
+    return Consumer<Cart>(builder: (context, value, child) => 
+    Column(
         children: [
 
           // search bar
@@ -81,12 +84,7 @@ class _ShopPageState extends State<ShopPage> {
             scrollDirection: Axis.horizontal,
             itemBuilder: (context, index){
               //create a new shoe
-              Shoe shoe = Shoe(
-                name: 'KD Trey 5', 
-                price: '458', 
-                description: 'Cool shoe', 
-                imagePath: 'lib/images/1.png'
-                );
+              Shoe shoe = value.getShoeList()[index];
               return ShoeTile(
 
               shoe: shoe,
@@ -102,6 +100,7 @@ class _ShopPageState extends State<ShopPage> {
             ),
           )
         ],
+    )
     );
   }
-}
+} 
