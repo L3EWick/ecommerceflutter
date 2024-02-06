@@ -24,7 +24,7 @@ List<Shoe> shoeShop = [
           imagePath: 'lib/images/3.png'
     ),
       Shoe(
-          name: 'Air Zoom Alphafly Next', 
+          name: 'Air Zoom Alphafly', 
           price: '359', 
           description: 'Cool shoe', 
           imagePath: 'lib/images/4.png'
