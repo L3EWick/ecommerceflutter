@@ -18,7 +18,7 @@ List<Shoe> shoeShop = [
           imagePath: 'lib/images/2.png'
     ),
       Shoe(
-          name: 'Jordans One Take 4', 
+          name: 'Jordans One Take6', 
           price: '257', 
           description: 'O solado do Jordan One Take 4 envolve quase até a entressola para que você possa começar, parar ou mudar de direção em um instante.', 
           imagePath: 'lib/images/3.png'
